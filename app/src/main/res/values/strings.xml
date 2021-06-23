@@ -12,4 +12,7 @@
     <string name="login_failed">"Log in failed"</string>
     <string name="log_in">Log in</string>
     <string name="register">Register</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>
