@@ -8,8 +8,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.bibliotecaonline.activities.R
-import com.example.bibliotecaonline.activities.databinding.FragmentMainMenuBinding
+import com.example.bibliotecaonline.R
+import com.example.bibliotecaonline.databinding.FragmentMainMenuBinding
 
 /**
  * A placeholder fragment containing a simple view.
