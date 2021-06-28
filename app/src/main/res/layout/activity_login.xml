@@ -10,6 +10,19 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".login.ui.login.LoginActivity">
+    <ImageView
+        android:id="@+id/imageViewExample"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.75"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/covertest"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible" />
+
 
     <EditText
         android:id="@+id/username"
@@ -23,7 +36,10 @@
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"
+        tools:visibility="visible"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/password"
@@ -39,7 +55,10 @@
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        android:visibility="visible"
+        tools:visibility="visible"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/login"
@@ -51,6 +70,7 @@
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="64dp"
         android:enabled="false"
+        android:shadowColor="#5F11EA"
         android:text="@string/action_sign_in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
