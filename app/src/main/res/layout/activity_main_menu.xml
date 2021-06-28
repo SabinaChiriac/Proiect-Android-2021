@@ -45,13 +45,25 @@
             android:id="@+id/profile_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/my_profile" />
+            android:text="@string/my_profile"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <Button
             android:id="@+id/info_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/library_info" />
+            android:text="@string/library_info"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <Button
+            android:id="@+id/av_books_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/available_books"
+            android:clickable="true"
+            android:focusable="true"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager

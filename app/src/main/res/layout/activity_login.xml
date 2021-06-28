@@ -72,6 +72,8 @@
         android:enabled="false"
         android:shadowColor="#5F11EA"
         android:text="@string/action_sign_in"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

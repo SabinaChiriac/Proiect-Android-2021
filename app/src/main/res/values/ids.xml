@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="action_LibraryInfo_to_MainMenu" type="id">LibraryAction</item>
-    <item name="action_UserProfile_to_MainMenu" type="id">User To MainMenu</item>
+    <item name="action_LibraryInfo_to_MainMenu" type="id"/>
+    <item name="action_UserProfile_to_MainMenu" type="id"/>
 </resources>

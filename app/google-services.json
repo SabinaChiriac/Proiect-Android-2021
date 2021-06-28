@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "638040689326",
+    "project_id": "proiect-android-2021",
+    "storage_bucket": "proiect-android-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638040689326:android:574bc403c654c2e0fabb3f",
+        "android_client_info": {
+          "package_name": "com.example.bibliotecaonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638040689326-h0acqomnk25linsg1kn0pos90iivnoi2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWBu8TyBshpzEggYc0FUNaDtJYuCSkOyA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638040689326-h0acqomnk25linsg1kn0pos90iivnoi2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
