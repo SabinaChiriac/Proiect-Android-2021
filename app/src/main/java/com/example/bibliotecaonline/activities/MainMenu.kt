@@ -2,7 +2,6 @@ package com.example.bibliotecaonline.activities
 
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
 import androidx.viewpager.widget.ViewPager
@@ -13,6 +12,7 @@ import android.widget.Button
 import com.example.bibliotecaonline.activities.ui.main.SectionsPagerAdapter
 import com.example.bibliotecaonline.databinding.ActivityMainMenuBinding
 import com.example.bibliotecaonline.R
+import com.example.bibliotecaonline.activities.fragments.LibraryInfoPage
 import com.example.bibliotecaonline.profile.fragment.UserProfile
 
 class MainMenu : AppCompatActivity() {
@@ -33,6 +33,11 @@ class MainMenu : AppCompatActivity() {
        val profilebutton=findViewById<Button>(R.id.profile_button)
         profilebutton.setOnClickListener{
             val intent=Intent(this, UserProfile::class.java)
+            startActivity(intent)
+        }
+        val infobutton=findViewById<Button>(R.id.info_button)
+        infobutton.setOnClickListener{
+            val intent=Intent(this,LibraryInfoPage::class.java)
             startActivity(intent)
         }
     }
