@@ -1,7 +1,7 @@
 package com.example.bibliotecaonline.library;
 
 public enum Books_Gendere {
-    BIBLIOGRAPY,
+    BIBLIOGRAPHY,
     FANTASY,
     FICTION,
     POETRY,

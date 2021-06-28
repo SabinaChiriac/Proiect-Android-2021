@@ -14,15 +14,6 @@ public interface BookDAO {
     @Query("SELECT * FROM bookItem")
     List<BookItem> getAll();
 
-    @Insert
-    void insertBook(BookItem bookItem);
-
-    @Delete
-    void delete(BookItem bookItem);
-
-    @Query("DELETE FROM bookItem WHERE title = :itemTitle")
-    void deleteByTitle(String itemTitle);
-
-    @Update
-    void update(BookItem bookItem);
+    @Query("SELECT * FROM bookItem WHERE title = :itemTitle")
+    void getByTitle(String itemTitle);
 }

@@ -8,23 +8,24 @@ import com.example.bibliotecaonline.library.entities.BookItem;
 
 import java.util.List;
 
-public class GetAllBooksTask extends AsyncTask<Void, Void, List<BookItem>> {
+public class GetBookByTitleTask extends AsyncTask<String, Void, Void> {
     private BookDataBase bookDataBase;
     private BookRepository.OnGetBookListener listener;
 
-    public GetAllBooksTask(BookDataBase bookDataBase, BookRepository.OnGetBookListener listener) {
+    public GetBookByTitleTask(BookDataBase bookDataBase, BookRepository.OnGetBookListener listener){
         this.bookDataBase = bookDataBase;
         this.listener = listener;
     }
 
     @Override
-    protected List<BookItem> doInBackground(Void... voids) {
-        return bookDataBase.bookDAO().getAll();
+    protected Void doInBackground(String... titles) {
+        bookDataBase.bookDAO().getByTitle(titles[0]);
+        return null;
     }
 
     @Override
-    protected void onPostExecute(List<BookItem> bookItems) {
-        super.onPostExecute(bookItems);
-        listener.onSuccess(bookItems);
+    protected void onPostExecute(Void aVoid) {
+        super.onPostExecute(aVoid);
+        listener.onSuccess();
     }
 }

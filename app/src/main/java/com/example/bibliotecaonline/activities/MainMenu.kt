@@ -12,8 +12,12 @@ import android.widget.Button
 import com.example.bibliotecaonline.activities.ui.main.SectionsPagerAdapter
 import com.example.bibliotecaonline.databinding.ActivityMainMenuBinding
 import com.example.bibliotecaonline.R
+import com.example.bibliotecaonline.activities.fragments.BooksFragment
 import com.example.bibliotecaonline.activities.fragments.LibraryInfoPage
+import com.example.bibliotecaonline.adapters.BookAdapter
+import com.example.bibliotecaonline.library.BookItemElement
 import com.example.bibliotecaonline.profile.fragment.UserProfile
+import java.util.ArrayList
 
 class MainMenu : AppCompatActivity() {
 
@@ -40,5 +44,16 @@ class MainMenu : AppCompatActivity() {
             val intent=Intent(this,LibraryInfoPage::class.java)
             startActivity(intent)
         }
+
+        val av_books_button = findViewById<Button>(R.id.av_books_btn)
+        av_books_button?.setOnClickListener{
+            addActivity()
+        }
+    }
+
+    fun addActivity() {
+        val intent: Intent = Intent(this, DisplayedBooksActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

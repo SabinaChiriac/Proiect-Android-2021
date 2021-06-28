@@ -34,4 +34,10 @@
         "Read list is for the books each user have read. \n\n"
     </string>
 
+    <string name="hint_title">Add title here…</string>
+    <string name="hint_author">Add author here…</string>
+    <string name="hint_gender">Add gender here...</string>
+    <string name="get">Get</string>
+    <string name="get_all">Get All</string>
+
 </resources>
