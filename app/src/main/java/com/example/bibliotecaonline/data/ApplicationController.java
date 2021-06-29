@@ -8,7 +8,7 @@ public class ApplicationController extends Application {
     private static ApplicationController instance;
     private static BookDataBase bookDataBase;
 
-    private final String bookDataBaseName = "BookDB";
+    private final String bookDataBaseName = "Biblioteca";
 
     @Override
     public void onCreate() {

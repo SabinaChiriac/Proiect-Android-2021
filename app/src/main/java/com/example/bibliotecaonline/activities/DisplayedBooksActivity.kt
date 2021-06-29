@@ -20,13 +20,6 @@ import kotlin.collections.forEach as forEach1
 
 class DisplayedBooksActivity : AppCompatActivity() {
 
-//    var connect: Connection? = null
-//    var ConnectionResult: String? = null
-//
-//    fun GetTextFromSQL(View v) {
-//        TextView title = (TextView) findViewById(R.id.)
-//    }
-
     private val bookRepository  = BookRepository()
     private var progressBar: ProgressBar? = null
 
@@ -34,7 +27,7 @@ class DisplayedBooksActivity : AppCompatActivity() {
         ArrayList<BookItemElement>()
     }
 
-    private lateinit var database: DatabaseReference
+   // private lateinit var database: DatabaseReference
 
     private var bookAdapter: BookAdapter? = null
 
@@ -42,7 +35,7 @@ class DisplayedBooksActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_displayed_books)
 
-        database = Firebase.database.reference
+        //database = Firebase.database.reference
         setupViews()
 
     }
@@ -50,13 +43,13 @@ class DisplayedBooksActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
-        database.addValueEventListener(bookListener)
+      //  database.addValueEventListener(bookListener)
     }
 
     override fun onStop() {
         super.onStop()
 
-        database.removeEventListener(bookListener)
+       // database.removeEventListener(bookListener)
     }
 
     private fun setupViews() {
@@ -67,28 +60,28 @@ class DisplayedBooksActivity : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.rv_books)
         val layoutManager: LinearLayoutManager =
             LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        recyclerView.LayoutManager = layoutManager
+        //recyclerView.LayoutManager = layoutManager
 
-        bookAdapter = BookAdapter(bookList)
+       // bookAdapter = BookAdapter(bookList)
         recyclerView.adapter = bookAdapter
     }
 
 
-    val bookListener = object : ValueEventListener {
-        fun onDataChange(dataSnapshot: DataSnapshot) {
-            bookList.clear()
-
-            val booksSnapshot = dataSnapshot.child(ARG_FB_BOOK)
-            booksSnapshot?.children?.forEach1 { itemSnapshot ->
-                val bookItemFB = itemSnapshot.getValue(BookItemElementFB::class)
-                bookItemFB?.convert()?.let { bookItem ->
-                    bookList.add(bookItem.convert())
-                }
-            }
-
-            bookAdapter?.notifyDataSetChanged()
-            // ...
-        }
-
-    }
+//    val bookListener = object : ValueEventListener {
+//        fun onDataChange(dataSnapshot: DataSnapshot) {
+//            bookList.clear()
+//
+//            val booksSnapshot = dataSnapshot.child(ARG_FB_BOOK)
+//            booksSnapshot?.children?.forEach1 { itemSnapshot ->
+//                val bookItemFB = itemSnapshot.getValue(BookItemElementFB::class)
+//                bookItemFB?.convert()?.let { bookItem ->
+//                    bookList.add(bookItem.convert())
+//                }
+//            }
+//
+//            bookAdapter?.notifyDataSetChanged()
+//            // ...
+//        }
+//
+//    }
 }
